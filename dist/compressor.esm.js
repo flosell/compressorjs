@@ -5,7 +5,7 @@
  * Copyright 2018-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2018-12-18T14:20:45.661Z
+ * Date: 2019-01-17T09:24:34.769Z
  */
 
 function _classCallCheck(instance, Constructor) {
@@ -620,7 +620,7 @@ function () {
           var result = target.result;
 
           _this.load(checkOrientation ? _objectSpread({}, parseOrientation(resetAndGetOrientation(result)), {
-            url: arrayBufferToDataURL(result, mimeType)
+            url: URL ? URL.createObjectURL(file) : arrayBufferToDataURL(result, mimeType)
           }) : {
             url: result
           });
@@ -903,3 +903,4 @@ function () {
 }();
 
 export default Compressor;
+//# sourceMappingURL=compressor.esm.js.map
